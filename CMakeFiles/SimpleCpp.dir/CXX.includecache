@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/main.cpp
+iostream
+-
+random
+-
+
