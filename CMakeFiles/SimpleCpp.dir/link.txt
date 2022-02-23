@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/SimpleCpp.dir/src/main.cpp.o  -o Simple-Cpp-Setup-main/bin/SimpleCpp 
+/usr/bin/c++     CMakeFiles/SimpleCpp.dir/src/guess_a_number.cpp.o CMakeFiles/SimpleCpp.dir/src/main.cpp.o  -o Simple-Cpp-Setup-main/bin/SimpleCpp 

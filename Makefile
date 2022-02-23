@@ -124,6 +124,33 @@ SimpleCpp/fast:
 	$(MAKE) -f CMakeFiles/SimpleCpp.dir/build.make CMakeFiles/SimpleCpp.dir/build
 .PHONY : SimpleCpp/fast
 
+src/guess_a_number.o: src/guess_a_number.cpp.o
+
+.PHONY : src/guess_a_number.o
+
+# target to build an object file
+src/guess_a_number.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleCpp.dir/build.make CMakeFiles/SimpleCpp.dir/src/guess_a_number.cpp.o
+.PHONY : src/guess_a_number.cpp.o
+
+src/guess_a_number.i: src/guess_a_number.cpp.i
+
+.PHONY : src/guess_a_number.i
+
+# target to preprocess a source file
+src/guess_a_number.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleCpp.dir/build.make CMakeFiles/SimpleCpp.dir/src/guess_a_number.cpp.i
+.PHONY : src/guess_a_number.cpp.i
+
+src/guess_a_number.s: src/guess_a_number.cpp.s
+
+.PHONY : src/guess_a_number.s
+
+# target to generate assembly for a file
+src/guess_a_number.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleCpp.dir/build.make CMakeFiles/SimpleCpp.dir/src/guess_a_number.cpp.s
+.PHONY : src/guess_a_number.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -160,6 +187,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... SimpleCpp"
+	@echo "... src/guess_a_number.o"
+	@echo "... src/guess_a_number.i"
+	@echo "... src/guess_a_number.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

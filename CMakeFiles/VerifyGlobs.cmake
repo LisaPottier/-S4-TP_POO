@@ -4,6 +4,7 @@
 # MY_SOURCES at CMakeLists.txt:19 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/*")
 set(OLD_GLOB
+  "/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/guess_a_number.cpp"
   "/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
