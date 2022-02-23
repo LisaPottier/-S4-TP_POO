@@ -24,14 +24,22 @@ void PlayHangman(Player player)
     std::string answer = PickARandomWorld();
 
     std::cout << "Let's play a Game ! I think about a world ... could you found it ? \n You have 10 life good luck !\n";
+    for (int i = 0; i < answer.size(); i++) {
+        std::cout << "_";
+    }
+    std::cout << std::endl;
     std::string user_try;
     std::cin >> user_try;
     while (user_try != answer && player.isAlive()) {
-        //In case the user answer doesn't give a number
+        //In case the user answer doesn't give a lettre
         while (!(std::cin >> user_try)) {
             std::cin.clear();                                                   //clear bad input flag
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
             std::cout << "Hmm... it's not a letter ...\n Try something else \n";
         }
-    }
+
+        /*string(1)
+            size_t
+            find(const string& str, size_t pos = 0) const;
+    */}
 }
