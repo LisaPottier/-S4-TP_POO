@@ -54,13 +54,13 @@ void PlayHangman(Player& player)
 
     while (player.isAlive()) {
         //In case the user answer doesn't give a letter as en entry
-        while (!(std::cin >> letter)) {
+        /*while (!(std::cin >> letter)) {
             std::cout << "cas erreur\n";
             std::cin.clear();                                                   //clear bad input flag
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
             std::cout << "Hmm... it's not a letter ...\n Try something else \n";
         }
-
+*/
         //player.tryAletter(letter); //add the letter to the already tried letters list
         //test the player answer with the real answer
         std::cout << user_answer << std::endl;
