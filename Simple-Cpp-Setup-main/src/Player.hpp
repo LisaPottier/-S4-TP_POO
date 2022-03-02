@@ -7,21 +7,25 @@
 class Player {
     //attribut
 private:
-    int               _nbLife;
+    int               _nbLife = 10;
     std::vector<char> _lettersTried;
+    std::string       _name;
 
 public:
     //methodes
     int               getNbLife() const { return _nbLife; };
-    void              LoseALife() { _nbLife--; };
-    void              tryAletter(char new_letter) { _lettersTried.push_back(new_letter); };
     std::vector<char> getLettersTried() { return _lettersTried; };
+    std::string       getName() const { return _name; };
+
+    void LoseALife() { _nbLife--; };
+    void tryAletter(char new_letter) { _lettersTried.push_back(new_letter); };
 
     //check if the player is alive
     bool isAlive() const { return _nbLife > 0; };
 
-    ~Player();
-    Player() = default;
+    ~Player() = default;
+    Player(std::string name)
+        : _name(name){};
 };
 
 #endif

@@ -1,4 +1,4 @@
-#include "../include/guess_a_number.hpp"
+#include "./guess_a_number.hpp"
 #include <iostream>
 #include <random>
 
