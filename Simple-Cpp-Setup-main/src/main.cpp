@@ -6,7 +6,9 @@
 
 int main()
 {
+    //List of world
+    std::vector<std::string> list_of_worlds = {"pizza", "pain", "venteux", "papillon"};
     //    playGuessANumber();
     Player Paul("Paul");
-    PlayHangman(Paul);
+    PlayHangman(Paul, list_of_worlds);
 }

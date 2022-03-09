@@ -3,12 +3,8 @@
 #include <iostream>
 #include <random>
 #include <vector>
-std::string PickARandomWorld()
+std::string PickARandomWorld(std::vector<std::string> list_of_worlds)
 {
-    //List of world
-    std::vector<std::string> list_of_worlds;
-    list_of_worlds = {"pizza", "pain", "venteux", "papillon"};
-
     //pick a random world
     int                                nb_of_worlds = list_of_worlds.size();
     static std::default_random_engine  generator{std::random_device{}()};
@@ -37,9 +33,9 @@ bool isLetterInTheWord(std::string& answer, std::string& current_user_answer, ch
     }
 }
 
-void PlayHangman(Player& player)
+void PlayHangman(Player& player, std::vector<std::string> list_of_worlds)
 {
-    std::string answer = PickARandomWorld();
+    std::string answer = PickARandomWorld(list_of_worlds);
     std::cout << answer << std::endl;
 
     std::cout << "Let's play a Game ! I think about a world ... could you found it ? \n You have 10 lives good luck !\n";
