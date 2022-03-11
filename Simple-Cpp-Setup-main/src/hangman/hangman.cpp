@@ -46,34 +46,35 @@ void PlayHangman(Player& player, std::vector<std::string> list_of_worlds)
     //take the letter given by the player
     std::cout << "try a letter !" << std::endl;
     char letter = '-'; //initialize the letter the player enters
-    std::cin >> letter;
 
     while (player.isAlive()) {
-        //In case the user answer doesn't give a letter as en entry
-        /*while (!(std::cin >> letter)) {
-            std::cout << "cas erreur\n";
-            std::cin.clear();                                                   //clear bad input flag
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
-            std::cout << "Hmm... it's not a letter ...\n Try something else \n";
-        }
-*/
-        //player.tryAletter(letter); //add the letter to the already tried letters list
-        //test the player answer with the real answer
-        std::cout << user_answer << std::endl;
-        std::cout << answer << std::endl;
+        //WIN
         if (user_answer == answer) {
-            std::cout << "Congratulation ! You win !" << answer << std::endl;
+            std::cout << "Congratulation ! You win ! It was " << answer << std::endl;
             return;
         }
-        //if the letter given is in the world
+
         else {
+            //In case the user answer doesn't give a letter as en entry
+            while (!(std::cin >> letter)) {
+                std::cout << "cas erreur\n";
+                std::cin.clear();                                                   //clear bad input flag
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
+                std::cout << "Hmm... it's not a letter ...\n Try something else \n";
+            }
+            //player.tryAletter(letter); //add the letter to the already tried letters list
+
+            //test the player answer with the real answer
+            std::cout << user_answer << std::endl;
+            std::cout << answer << std::endl;
+            //if the letter given is in the world
+
             if (!isLetterInTheWord(answer, user_answer, letter)) { //add the letter to the answer_user if it's right
                 player.LoseALife();
             }
             std::cout << user_answer << "\nYou have " << player.getNbLife() << " lives\n";
             //continue the game
             std::cout << "try another letter !" << std::endl;
-            std::cin >> letter;
         }
     }
     std::cout << "You lose ... The answer was " << answer << "\n but you can try again another time\n";
