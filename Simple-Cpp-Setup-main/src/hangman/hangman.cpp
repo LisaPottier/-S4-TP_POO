@@ -48,6 +48,7 @@ void PlayHangman(Player& player, std::vector<std::string> list_of_worlds)
     char letter = '-'; //initialize the letter the player enters
 
     while (player.isAlive()) {
+        player.ShowLettersTried();
         //WIN
         if (user_answer == answer) {
             std::cout << "Congratulation ! You win ! It was " << answer << std::endl;
@@ -62,7 +63,7 @@ void PlayHangman(Player& player, std::vector<std::string> list_of_worlds)
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
                 std::cout << "Hmm... it's not a letter ...\n Try something else \n";
             }
-            //player.tryAletter(letter); //add the letter to the already tried letters list
+            player.AddNewTriedLetter(letter); //add the letter to the already tried letters list
 
             //test the player answer with the real answer
             std::cout << user_answer << std::endl;
