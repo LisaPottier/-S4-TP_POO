@@ -17,7 +17,6 @@ void playGuessANumber()
     //Start the game
     std::cout << "Let's play a game !\n I picked a number between 0 and 100, Find it !\n";
     int answerUser = 0;
-    std::cin >> answerUser;
 
     while (answerUser != randomNumber) {
         //In case the user answer doesn't give a number
@@ -28,17 +27,15 @@ void playGuessANumber()
         }
 
         //comparaisons with the answer
-        if (answerUser > randomNumber) {
-            std::cout << answerUser << "\nGreater !!\n Try Again ! \n";
-            std::cin >> answerUser;
+        if (answerUser < randomNumber) {
+            std::cout << "\nGreater !!\n Try Again ! \n";
         }
-        else if (answerUser < randomNumber) {
-            std::cout << answerUser << "\n Lower !!\n Try Again ! \n";
-            std::cin >> answerUser;
+        else if (answerUser > randomNumber) {
+            std::cout << "\nLower !!\n Try Again ! \n";
         }
 
         else {
-            std::cout << answerUser << "\nCongratulatiooooon !!\n";
+            std::cout << "\nCongratulatiooooon !!\n";
             return;
         }
     }

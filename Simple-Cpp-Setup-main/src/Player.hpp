@@ -28,8 +28,6 @@ public:
     ~Player() = default;
     Player(std::string name)
         : _name(name){};
-    Player(Player& copie)
-        : _name(copie._name){};
 };
 
 #endif

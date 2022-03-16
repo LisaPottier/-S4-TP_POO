@@ -36,9 +36,8 @@ bool isLetterInTheWord(std::string& answer, std::string& current_user_answer, ch
 void PlayHangman(Player& player, std::vector<std::string> list_of_worlds)
 {
     std::string answer = PickARandomWorld(list_of_worlds);
-    std::cout << answer << std::endl;
 
-    std::cout << "Let's play a Game ! I think about a world ... could you found it ? \n You have 10 lives good luck !\n";
+    std::cout << "Let's play a Game " << player.getName() << "! I think about a word ... could you find it ? \n You have 10 lives good luck !\n";
     //initialize the answer to display
     std::string user_answer(answer.size(), '-');
     std::cout << user_answer << std::endl;
@@ -51,7 +50,7 @@ void PlayHangman(Player& player, std::vector<std::string> list_of_worlds)
         player.ShowLettersTried();
         //WIN
         if (user_answer == answer) {
-            std::cout << "Congratulation ! You win ! It was " << answer << std::endl;
+            std::cout << "Congratulation " << player.getName() << "! You win ! It was " << answer << std::endl;
             return;
         }
 
@@ -65,15 +64,14 @@ void PlayHangman(Player& player, std::vector<std::string> list_of_worlds)
             }
             player.AddNewTriedLetter(letter); //add the letter to the already tried letters list
 
-            //test the player answer with the real answer
-            std::cout << user_answer << std::endl;
-            std::cout << answer << std::endl;
-            //if the letter given is in the world
-
             if (!isLetterInTheWord(answer, user_answer, letter)) { //add the letter to the answer_user if it's right
                 player.LoseALife();
             }
-            std::cout << user_answer << "\nYou have " << player.getNbLife() << " lives\n";
+            //test the player answer with the real answer
+            std::cout << user_answer << std::endl;
+            //if the letter given is in the world
+
+            std::cout << "\nYou have " << player.getNbLife() << " lives\n";
             //continue the game
             std::cout << "try another letter !" << std::endl;
         }
