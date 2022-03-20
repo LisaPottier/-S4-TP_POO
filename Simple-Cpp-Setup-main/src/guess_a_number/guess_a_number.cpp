@@ -2,6 +2,8 @@
 #include <iostream>
 #include <random>
 
+#include "../menu.hpp"
+
 int PickARandomNumber(int min, int max)
 {
     static std::default_random_engine  generator{std::random_device{}()};
@@ -19,12 +21,7 @@ void playGuessANumber()
     int answerUser = 0;
 
     while (answerUser != randomNumber) {
-        //In case the user answer doesn't give a number
-        while (!(std::cin >> answerUser)) {
-            std::cin.clear();                                                   //clear bad input flag
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
-            std::cout << "Hmm... A number I said ...\n Try something else \n";
-        }
+        answerUser=AskPlayerAnswer<int>();
 
         //comparaisons with the answer
         if (answerUser < randomNumber) {

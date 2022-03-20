@@ -4,6 +4,7 @@
 
 #include <vector>
 #include "../Player.hpp"
+#include "../menu.hpp"
 
 //return a random world within several chosen worlds
 std::string PickARandomWorld(std::vector<std::string> list_of_worlds);
