@@ -7,15 +7,11 @@
 
 int main()
 {
+
     //MENU:
 
-    char   choice = DisplayChoices();
     Player player = DisplayChoicePlayer();
-
-    while (!(choice == 'H' || choice == 'h' || choice == 'G' || choice == 'g')) {
-        std::cout << "It's not a valid command ! Try something else please\n";
-        std::cin >> choice;
-    }
+    char   choice = DisplayChoices(player.getName());
 
     if (choice == 'G' || choice == 'g') {
         playGuessANumber();
@@ -27,4 +23,6 @@ int main()
         //    playGuessANumber();$
         PlayHangman(player, list_of_worlds);
     }
+    std::cout <<"press Q to quit";
+    std::cin >>quit;
 }
