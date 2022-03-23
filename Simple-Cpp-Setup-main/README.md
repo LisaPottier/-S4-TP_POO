@@ -1,6 +1,59 @@
+#What I have read
+
+____________________
+Level 1
+
+Install a compiler ok
+Use a IDE ok
+Use GIT ok
+Use a debugger ok
+Use a formatting tool ok
+Use a static analysers ok
+Naming ok
+Stack vs Heap ok
+Consistency in style ok
+_____________________
+NOTES PERSO Level 1: 
+naming:
+	note : - out apres les var non const (varOut)
+
+Stack & Heap
+	note : - never use new (heap -> leak de memoire possible)
+	       -if you need to have something allocated on the heap, use a std::unique_ptr or a std::shared_ptr that will handle the new and the delete for you
+____________________
+
+
+
 # Simple-Cpp-Setup
 
 Welcome to this minimalist C++ project!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## If you use the Dev Container
 
@@ -10,7 +63,33 @@ If you install [ms-vscode-remote.remote-containers](https://marketplace.visualst
 
 NB: the container might take a while to build the first time.
 
-## If you don't use the Dev Container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Compiling
 
