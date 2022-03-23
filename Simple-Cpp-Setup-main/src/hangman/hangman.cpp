@@ -56,13 +56,7 @@ void PlayHangman(Player& player, std::vector<std::string> list_of_worlds)
 
         else {
             char letter = AskPlayerAnswer<char>();
-            //In case the user answer doesn't give a letter as en entry
-            /*while (!(std::cin >> letter)) {
-                std::cout << "cas erreur\n";
-                std::cin.clear();                                                   //clear bad input flag
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
-                std::cout << "Hmm... it's not a letter ...\n Try something else \n";
-            }*/
+
             player.AddNewTriedLetter(letter); //add the letter to the already tried letters list
 
             if (!isLetterInTheWord(answer, user_answer, letter)) { //add the letter to the answer_user if it's right

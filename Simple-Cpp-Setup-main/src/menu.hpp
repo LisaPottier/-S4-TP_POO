@@ -6,8 +6,18 @@
 #include <iostream>
 #include <algorithm>
 
-char   DisplayChoices(std::string name);
+int   DisplayChoices(std::string name);
+
+void DisplayMenu();
+
 Player DisplayChoicePlayer();
+
+
+enum ChoiceGame {
+    Hangman = 1,
+    Guess_The_Number = 2,
+};
+
 
 template <typename T> T AskPlayerAnswer(){
     T answer;

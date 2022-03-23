@@ -6,15 +6,45 @@
 
 #IncludeRegexTransform: 
 
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/Player.cpp
+./Player.hpp
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/Player.hpp
+algorithm
+-
+iostream
+-
+
 /home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/Player.hpp
 string
 -
 vector
 -
 
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/guess_a_number/guess_a_number.cpp
+./guess_a_number.hpp
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/guess_a_number/guess_a_number.hpp
+iostream
+-
+random
+-
+../menu.hpp
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/menu.hpp
+
 /home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/guess_a_number/guess_a_number.hpp
 ../Player.hpp
 /home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/Player.hpp
+
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/hangman/hangman.cpp
+./hangman.hpp
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/hangman/hangman.hpp
+array
+-
+iostream
+-
+random
+-
+vector
+-
 
 /home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/hangman/hangman.hpp
 vector
@@ -37,6 +67,16 @@ string
 /home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/hangman/hangman.hpp
 ./menu.hpp
 /home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/menu.hpp
+
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/menu.cpp
+./menu.hpp
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/menu.hpp
+algorithm
+-
+iostream
+-
+./Player.hpp
+/home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/Player.hpp
 
 /home/lisa/Documents/S4/POO/-S4-TP_POO/Simple-Cpp-Setup-main/src/menu.hpp
 ./Player.hpp

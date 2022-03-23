@@ -1,15 +1,18 @@
 #include "./menu.hpp"
 #include <algorithm>
 #include <iostream>
+#include <string>
+#include "./guess_a_number/guess_a_number.hpp"
+#include "./hangman/hangman.hpp"
 #include "./Player.hpp"
 
-char DisplayChoices(std::string name)
+int DisplayChoices(std::string name)
 {
-    std::cout << "hello " << name << "!\nWhich game do you want to play ? : \nPRESS G -> Guess A Number\nPRESS H -> Hangman\n";
-    char choice = '_';
+    std::cout << "hello " << name << "!\nWhich game do you want to play ? : \nPRESS 1 -> Guess A Number\nPRESS 2 -> Hangman\n";
+    int choice = 0 ;
     std::cin >> choice;
     
-    while (!(choice == 'H' || choice == 'h' || choice == 'G' || choice == 'g')) {
+    while (choice != 1 && choice != 2) {
         std::cout << "It's not a valid command ! Try something else please\n";
         std::cin >> choice;
     }
@@ -24,3 +27,28 @@ Player DisplayChoicePlayer()
     Player player(name);
     return player;
 }
+
+void DisplayMenu(){
+    Player player = DisplayChoicePlayer();
+    int   choice = DisplayChoices(player.getName());
+    
+    switch (tolower(choice))
+    {
+        case ChoiceGame::Guess_The_Number :
+            playGuessANumber();
+            break;
+
+        case ChoiceGame::Hangman :
+        {
+            //Get the list of world
+            std::vector<std::string> list_of_worlds = {"pizza", "pain", "venteux", "papillon"};
+            //    playGuessANumber();$
+            PlayHangman(player, list_of_worlds);
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+
