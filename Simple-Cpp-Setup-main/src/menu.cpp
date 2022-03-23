@@ -6,13 +6,13 @@
 #include "./hangman/hangman.hpp"
 #include "./Player.hpp"
 
-int DisplayChoices(std::string name)
+char DisplayChoices(std::string name)
 {
     std::cout << "hello " << name << "!\nWhich game do you want to play ? : \nPRESS 1 -> Guess A Number\nPRESS 2 -> Hangman\n";
-    int choice = 0 ;
+    char choice = '0' ;
     std::cin >> choice;
     
-    while (choice != 1 && choice != 2) {
+    while (choice != '1' && choice != '2') {
         std::cout << "It's not a valid command ! Try something else please\n";
         std::cin >> choice;
     }
@@ -28,9 +28,9 @@ Player DisplayChoicePlayer()
     return player;
 }
 
-void DisplayMenu(){
+void DisplayMenu(char &stop){
     Player player = DisplayChoicePlayer();
-    int   choice = DisplayChoices(player.getName());
+    char   choice = DisplayChoices(player.getName());
     
     switch (tolower(choice))
     {
@@ -42,13 +42,22 @@ void DisplayMenu(){
         {
             //Get the list of world
             std::vector<std::string> list_of_worlds = {"pizza", "pain", "venteux", "papillon"};
-            //    playGuessANumber();$
+            //    playGuessANumber();
             PlayHangman(player, list_of_worlds);
             break;
         }
+        case ChoiceGame::Quit :
+        {
+            std::cout << "Do you really want to quit ?(Y/N)\n";
+            char answer='n';
+            std::cin >> answer;
+            if(tolower(answer)=='y'){
+                std::cout <<"Sad to see you go ... bye "<< player.getName()<<std::endl;
+            }
+            stop=true;
+        }
+
         default:
             break;
     }
 }
-
-

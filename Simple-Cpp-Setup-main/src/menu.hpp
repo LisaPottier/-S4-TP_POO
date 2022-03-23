@@ -6,20 +6,22 @@
 #include <iostream>
 #include <algorithm>
 
-int   DisplayChoices(std::string name);
+char DisplayChoices(std::string name);
 
 void DisplayMenu();
 
 Player DisplayChoicePlayer();
 
 
-enum ChoiceGame {
-    Hangman = 1,
-    Guess_The_Number = 2,
+enum class ChoiceGame {
+    Hangman = '1',
+    Guess_The_Number = '2',
+    Quit = 'q',
 };
 
 
-template <typename T> T AskPlayerAnswer(){
+template <typename T>
+T AskPlayerAnswer(){
     T answer;
     //In case the user answer doesn't give a letter as en entry
     while (!(std::cin >> answer)) {
