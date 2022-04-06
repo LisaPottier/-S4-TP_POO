@@ -7,18 +7,15 @@
 #include <algorithm>
 
 char DisplayChoices(std::string name);
-
 void DisplayMenu();
 
-Player DisplayChoicePlayer();
+Player DisplayChoicePlayer();//Display the menu and return true if the entered input is ok, false if not
 
-
-enum class ChoiceGame {
+enum class ChoiceGame :char {
     Hangman = '1',
     Guess_The_Number = '2',
-    Quit = 'q',
+    Quit = 'q'
 };
-
 
 template <typename T>
 T AskPlayerAnswer(){

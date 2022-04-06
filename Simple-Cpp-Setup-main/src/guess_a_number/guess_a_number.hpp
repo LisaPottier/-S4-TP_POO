@@ -8,6 +8,6 @@
 int PickARandomNumber(int min, int max);
 
 //Play the game
-void playGuessANumber();
+void PlayGuessANumber();
 
 #endif

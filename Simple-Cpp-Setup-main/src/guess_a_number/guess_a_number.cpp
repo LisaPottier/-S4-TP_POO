@@ -11,7 +11,7 @@ int PickARandomNumber(int min, int max)
     return distribution(generator);
 }
 
-void playGuessANumber()
+void PlayGuessANumber()
 {
     //ETAPE 1: pick a random number between 0 and 100
     int randomNumber = PickARandomNumber(0, 100);

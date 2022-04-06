@@ -5,7 +5,6 @@
 
 int main()
 {
-
-    DisplayMenu();
-
+    DisplayMenu();    
+    
 }
