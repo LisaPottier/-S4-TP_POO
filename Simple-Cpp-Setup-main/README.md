@@ -1,6 +1,4 @@
 #What I have read
-
-____________________
 ##Level 1
 
 [x] Install a compiler 
@@ -13,13 +11,28 @@ ____________________
 [x] Stack vs Heap 
 [x] Consistency in style 
 _____________________
-#NOTES PERSO Level 1: 
-##naming:
+##NOTES PERSO Level 1: 
+###Naming:
 	note : - out apres les var non const (varOut)
 
-##Stack & Heap
+###Stack & Heap
 	note : - never use new (heap -> leak de memoire possible)
 	       -if you need to have something allocated on the heap, use a std::unique_ptr or a std::shared_ptr that will handle the new and the delete for you
+_______________________________________________________
+_______________________________________________________
+
+#What I have read
+##Level 2
+
+[x] Make it work, then make it good
+[x] Prefer free functions 
+[x] Design cohesive classes 
+[x] Use structs to group data 
+[x] Write small functions
+[x] DRY: Don't repeat yourself
+[x] Enums
+[x] Split problems in small pieces
+[x] Composition over Inheritance
 ____________________
 #Assignements
 
@@ -32,36 +45,22 @@ ____________________
 [ ] An AI for Hangman
 [ ] Going further
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Simple-Cpp-Setup
 
 Welcome to this minimalist C++ project!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## If you use the Dev Container
 
@@ -70,34 +69,6 @@ If you install [ms-vscode-remote.remote-containers](https://marketplace.visualst
 (Unfortunately, if you want to do GUI applications they don't work well from within a container and you might have to do a proper setup on your own desktop instead. But for simple command-line applications this works amazingly well!)
 
 NB: the container might take a while to build the first time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Compiling
 
